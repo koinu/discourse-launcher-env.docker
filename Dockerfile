@@ -8,3 +8,7 @@ RUN apt-get update \
 && apt-get install -y git ssh-client lxc-docker \
 && apt-get clean \
 && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+WORKDIR /var/discourse
+
+CMD ["/bin/bash"]
